@@ -6,8 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
-
-    public static WebDriver createADriver(String browserName){
+    /**
+     * you homework will be improve this method
+     * This method return webdriver object based on browser type
+     * if you want to use chrome browser,just provide chrome  as sparameter
+     * @param browserName
+     * @return webdriver object
+     */
+    public static WebDriver createDriver(String browserName){
 
         if(browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
