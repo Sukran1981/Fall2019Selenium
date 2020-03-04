@@ -47,8 +47,21 @@ public class BasicNavigation {
         driver.navigate().back();
 //CHECKING IF PAGE TITLE IS EQUALS TO GOOGLE
         verifyEquals(driver.getTitle(),"Google");
-driver.navigate().forward();
+        driver.navigate().forward();
+        Thread.sleep(3000);
         System.out.println("Title :"+driver.getTitle());
+
+
+        System.out.println("URL: "+driver.getCurrentUrl());
+        driver.navigate().refresh();
+        Thread.sleep(3000);//for demo ,wait 3 second
+
+        //driver.getTitle()-returns page title of the page that is currently opened
+
+        //driver.navigate().to()=driver.get()
+        //must be at the end
+
+
         //MUST BE AT THE END
         driver.close();//to close browser
 
