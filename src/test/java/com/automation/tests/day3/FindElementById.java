@@ -14,15 +14,16 @@ public class FindElementById {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver =new ChromeDriver();
+
         driver.get("http://practice.cybertekschool.com/login");
                 driver.findElement(By.name("username")).sendKeys("tomsmith");
-
                 Thread.sleep(2000);
+
          WebElement password = driver.findElement(By.name("password"));//object
         //reference variable
 
          password.sendKeys("SuperSecretPassword");
-
+        Thread.sleep(2000);
 
          driver.findElement(By.id("wooden_spoon")).click();
 
