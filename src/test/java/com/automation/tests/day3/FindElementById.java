@@ -39,6 +39,15 @@ public class FindElementById {
              System.out.println("TEST FAILED");
          }
 
+         //let's click on logout  button.It looks like a button,but it's actually a link
+        //every element with <a >tag is alink
+// if  you hav ecouple spaces in the text,just use partialLinkText instead of link Text
+        WebElement  logout =driver.findElement(By.linkText("Logout"));
+
+         logout.click();
+
+         Thread.sleep(2000);
+
          driver.quit();
 
     }
