@@ -29,6 +29,9 @@ public class RadioButtons {
         for (WebElement radioButton : radioButtons) {
 
             String id = radioButton.getAttribute("id");
+            boolean isSelected=radioButton.isSelected();
+
+            System.out.println(id +"is selected ? "+isSelected);
 
             if (radioButton.isEnabled()) {
                 radioButton.click();
@@ -40,6 +43,7 @@ public class RadioButtons {
             } else {
                 System.out.println("button is disabled,not clicked ::");
             }
+            System.out.println();
             }
             driver.quit();
         }
@@ -48,3 +52,4 @@ public class RadioButtons {
 
 //if button is eligible to click
 //return true of you can click on the button
+// check if button eligible to click but not click
