@@ -21,6 +21,6 @@ public class MyFirstSeleniumScript {
 
         driver.get("http://google.com");
 
-
+driver.quit();
     }
 }
