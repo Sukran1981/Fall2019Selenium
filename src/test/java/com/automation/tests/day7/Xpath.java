@@ -5,11 +5,17 @@ import com.automation.utilities.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
         public class Xpath {
+
             static String userNameLocator = "//label[text()='Username']/following-sibling::input";
+// code little bit organisze
+            //we create String static variable
+
             public static void main(String[] args) {
                 WebDriver driver = DriverFactory.createDriver("chrome");
                 driver.get("http://practice.cybertekschool.com/login");
                 BrowserUtils.wait(3);
+
+               // driver.findElement(By.xpath("//label[text()='Username']/following-sibling::input"));
                 driver.findElement(By.xpath(userNameLocator));
                 BrowserUtils.wait(3);
                 driver.quit();
