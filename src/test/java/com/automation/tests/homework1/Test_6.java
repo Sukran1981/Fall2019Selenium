@@ -16,8 +16,8 @@ private WebDriver driver;
 public void Case6(){
 
         WebDriverManager.chromedriver().version("79").setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
 
         driver.get("https://www.tempmailaddress.com/");
         String email= driver.findElement(By.id("email")).getText();
